@@ -30,8 +30,8 @@ fi
 
 date
 
-# Loading Boost
-module load boost/1.66.0
+# Loading GCC and Boost
+module load gcc/13.1.0 boost/1.66.0
 
 # Where is Boost?
 whereis boost
