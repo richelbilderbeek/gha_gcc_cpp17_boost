@@ -21,8 +21,11 @@ jobs:
       - name: Install boost
         run: sudo apt-get install libboost-all-dev
 
+      - name: Search Boost, thanks https://stackoverflow.com/a/29657712
+        run: whereis boost
+
       - name: Compile
-        run: g++ main.cpp -o gha_gcc_cpp17_boost
+        run: g++ main.cpp -I/usr/include -o gha_gcc_cpp17_boost
 
       - name: Show
         run: |
