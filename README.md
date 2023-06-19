@@ -17,7 +17,7 @@ The goal of this project is to have a clean GitHub Actions build, with specs:
 
 More complex builds:
 
- * [none]
+ * Use the `Cmake` build system: [gha_cmake_gcc_cpp17_boost](https://github.com/richelbilderbeek/gha_cmake_gcc_cpp17_boost)
 
 Equally complex builds:
 
