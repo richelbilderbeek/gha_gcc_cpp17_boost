@@ -1,0 +1,38 @@
+# Build the C++ code
+name: Check build
+
+on:
+  push:
+  pull_request:
+  schedule:
+  - cron: "0 0 1 * *"
+
+jobs:
+
+  check_build:
+
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install boost
+        run: sudo apt-get install libboost-all-dev
+
+      - name: Compile
+        run: g++ main.cpp -o gha_gcc_cpp17_boost
+
+      - name: Show
+        run: |
+          ls
+          find .
+      
+      - name: Run the program
+        run: ./gha_gcc_cpp17_boost
+
+
+
+
+
