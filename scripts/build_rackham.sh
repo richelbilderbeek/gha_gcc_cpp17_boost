@@ -46,8 +46,6 @@ date
 #        boost/1.81.0-gcc10.3.0
 
 module load gcc/11.2.0 boost/1.78.0_gcc11.2.0
-# g++ main.cpp -lboost_graph -o gha_intel_cpp17_boost # Really need -L
+# g++ main.cpp -lboost_graph -o gha_intel_cpp17_boost # Really need that -L :-)
 g++ main.cpp -L${BOOST_ROOT}/lib -lboost_graph -o gha_intel_cpp17_boost
-# g++ main.cpp -L$BOOST_ROOT/lib -lboost_graph -o gha_intel_cpp17_boost
-# g++ main.cpp -L/sw/libs/boost/1.78.0_gcc11.2.0/snowy/lib -lboost_graph -o gha_intel_cpp17_boost
 ./gha_intel_cpp17_boost
