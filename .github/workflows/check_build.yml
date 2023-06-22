@@ -25,7 +25,7 @@ jobs:
         run: whereis boost
 
       - name: Compile
-        run: g++ main.cpp -I/usr/include -o gha_gcc_cpp17_boost
+        run: g++ main.cpp -I/usr/include -o gha_gcc_cpp17_boost -lboost_graph
 
       - name: Show
         run: |
